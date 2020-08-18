@@ -16,7 +16,6 @@ public class SortUtils {
      * @return 前n个值的集合
      */
     private static TreeSet<Integer> topK(int[] array, int n) {
-
         TreeSet<Integer> set = new TreeSet<>();
         for (int value : array) {
             if (set.size() < n) {

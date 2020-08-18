@@ -1,6 +1,6 @@
 package org.humor.zxc.library.commons.web.utils;
 
-import org.humor.zxc.commons.web.dto.ResultWrapper;
+import org.humor.zxc.library.commons.web.dto.ResultWrapper;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Component;
 
