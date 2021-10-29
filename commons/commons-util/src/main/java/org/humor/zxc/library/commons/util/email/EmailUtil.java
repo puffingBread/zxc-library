@@ -44,9 +44,9 @@
 //public class EmailUtil {
 //	private static final int SMTP_SERVER_PORT = 25;
 //	private static final String SMTP_PROTOCOL = "smtp";
-//	private static final String SMTP_HOST_NAME = "smtp.smartconns.com";
-//    private static final String SMTP_AUTH_USER = "xuzeng@smartconns.com";
-//    private static final String SMTP_AUTH_PWD  = "Xz15919672519.";
+//	private static final String SMTP_HOST_NAME = "smtp.xxx.com";
+//    private static final String SMTP_AUTH_USER = "humor@xxx.com";
+//    private static final String SMTP_AUTH_PWD  = "********";
 //    private static final boolean ssl = false;
 //    private static final String CHARSET_UTF8  = "utf-8";
 //
