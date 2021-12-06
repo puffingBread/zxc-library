@@ -1,7 +1,5 @@
 package org.humor.zxc.library.commons.util.utils;
 
-
-
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -83,11 +81,11 @@ public class IpUtils {
      * @return ip地址列表
      */
     public static Set<String> getLocalV4Ips() {
-        Set<String> LOCAL_IPS = new HashSet<>();
+        Set<String> localIps = new HashSet<>();
         try {
-            Enumeration<NetworkInterface> allNEtInterfaces = NetworkInterface.getNetworkInterfaces();
-            while (allNEtInterfaces.hasMoreElements()) {
-                NetworkInterface networkInterface = allNEtInterfaces.nextElement();
+            Enumeration<NetworkInterface> allNetInterfaces = NetworkInterface.getNetworkInterfaces();
+            while (allNetInterfaces.hasMoreElements()) {
+                NetworkInterface networkInterface = allNetInterfaces.nextElement();
                 // 去除回环接口，子接口，未运行的接口
                 if (networkInterface.isLoopback() || networkInterface.isVirtual() || !networkInterface.isUp()) {
                     continue;
@@ -96,14 +94,14 @@ public class IpUtils {
                 while (addresses.hasMoreElements()) {
                     InetAddress ip = addresses.nextElement();
                     if (ip instanceof Inet4Address) {
-                        LOCAL_IPS.add(ip.getHostAddress());
+                        localIps.add(ip.getHostAddress());
                     }
                 }
             }
         } catch (SocketException e) {
             throw new RuntimeException(e);
         }
-        return LOCAL_IPS;
+        return localIps;
     }
 
 }

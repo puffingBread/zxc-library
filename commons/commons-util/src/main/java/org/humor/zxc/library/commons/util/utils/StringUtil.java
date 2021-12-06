@@ -1670,10 +1670,10 @@ public class StringUtil extends StringUtils {
       } 
     
     public static void main(String[] args){
-    	System.out.println(isEmail("9.98r_de_r-ry.xu@vips.tack.net"));
-    	System.out.println(isEmail("658346@qq.com"));
+		System.out.println(isEmail("9.98r_de_r-ry@vip.com"));
+		System.out.println(isEmail("26583463@qq.com"));
 
-    }
+	}
 
 	/**
 	 * 将unicode编码的字符串转成utf-8编码的字符串

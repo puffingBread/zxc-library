@@ -7,6 +7,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -708,6 +709,38 @@ public class FileUtils {
     }
 
     /**
+     * 读取文件内容
+     *
+     * @param file 文件的全路径名,比如  D:/soft/qy/desk_img/1.jpg
+     * @return 返回文件内容的二进制字节数组
+     */
+    public static byte[] readFileBytes(String file) {
+        FileInputStream fis;
+        ByteArrayOutputStream bos = null;
+        try {
+            fis = new FileInputStream(file);
+            bos = new ByteArrayOutputStream();
+            int bytesRead;
+            byte[] buffer = new byte[1024 * 1024];
+            while ((bytesRead = fis.read(buffer)) != -1) {
+                bos.write(buffer, 0, bytesRead);
+                Arrays.fill(buffer, (byte) 0);
+            }
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        } finally {
+            try {
+                if (bos != null) {
+                    bos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return bos.toByteArray();
+    }
+
+    /**
      * 从文件路径得到文件名。
      *
      * @param filePath 文件的路径,可以是相对路径也可以是绝对路径
@@ -1091,7 +1124,6 @@ public class FileUtils {
         FileUtils.appendContent(fileName, "美白", null);
         FileUtils.appendContent(fileName, "美白2", "###");
         FileUtils.appendContent(fileName, "玻尿酸", "@@");
-        FileUtils.appendContent(fileName, "麒云", "\n");
         FileUtils.appendContent(fileName, "玻尿酸丰唇", "\n");
         FileUtils.appendContent(fileName, "2288", ",");
         System.out.println("写txt文件完成~");
