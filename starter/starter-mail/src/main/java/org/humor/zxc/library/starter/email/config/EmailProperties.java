@@ -20,8 +20,7 @@ public class EmailProperties {
     private String host = "smtp.xxx.com";
     private String authUser = "humor@xxx.com";
     private String authPassword = "********";
-    private boolean ssl = false;
-    private String charset = "utf-8";
+    private Boolean ssl = false;
 
 }
 

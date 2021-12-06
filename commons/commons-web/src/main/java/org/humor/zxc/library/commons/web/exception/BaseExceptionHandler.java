@@ -48,7 +48,7 @@ public class BaseExceptionHandler {
 
     @PostConstruct
     public void init() {
-        logger.info("-//(ǒ.ǒ)//- Marketplus BaseExceptionHandler");
+        logger.info("-//(ǒ.ǒ)//- BaseExceptionHandler");
     }
 
     /**

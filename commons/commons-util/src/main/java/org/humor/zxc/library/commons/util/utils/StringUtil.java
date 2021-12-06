@@ -1257,8 +1257,9 @@ public class StringUtil extends StringUtils {
 	// 中英文组合截字
 	public static final String mySubString(String str, int length)
 			throws UnsupportedEncodingException {
-		if (length < 2)
-			return str;
+        if (length < 2) {
+            return str;
+        }
 		Pattern p = Pattern.compile("^[^\\x00-\\xff]$");
 		int i = 0, j = 0;
 		for (char c : str.toCharArray()) {
