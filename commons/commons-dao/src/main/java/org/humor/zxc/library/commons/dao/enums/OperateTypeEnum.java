@@ -1,6 +1,6 @@
 package org.humor.zxc.library.commons.dao.enums;
 
-import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.stream.Stream;

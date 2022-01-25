@@ -12,6 +12,7 @@
     <modules>
         <module>commons</module>
         <module>starter</module>
+        <module>test</module>
     </modules>
 
     <properties>
@@ -22,8 +23,8 @@
         <maven.test.skip>true</maven.test.skip>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
-        <spring.boot.version>2.6.1</spring.boot.version>
-        <spring.version>5.3.13</spring.version>
+        <spring.boot.version>2.6.2</spring.boot.version>
+        <spring.version>5.3.14</spring.version>
         <lombok.version>1.18.22</lombok.version>
         <fastjson.version>1.2.78</fastjson.version>
     </properties>

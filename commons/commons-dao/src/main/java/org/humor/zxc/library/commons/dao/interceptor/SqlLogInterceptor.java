@@ -3,7 +3,7 @@ package org.humor.zxc.library.commons.dao.interceptor;
 import com.alibaba.druid.pool.DruidPooledPreparedStatement;
 import com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl;
 import com.google.common.collect.Sets;
-import com.mysql.jdbc.PreparedStatement;
+import com.mysql.cj.jdbc.ServerPreparedStatement;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.jsqlparser.parser.CCJSqlParserUtil;
 import net.sf.jsqlparser.util.TablesNamesFinder;
@@ -150,6 +150,6 @@ public class SqlLogInterceptor implements Interceptor {
         if (stmt instanceof PreparedStatementProxyImpl) {
             stmt = ((PreparedStatementProxyImpl) stmt).getRawObject();
         }
-        return stmt.unwrap(PreparedStatement.class).asSql().replaceAll("\\s+", " ");
+        return stmt.unwrap(ServerPreparedStatement.class).asSql().replaceAll("\\s+", " ");
     }
 }
