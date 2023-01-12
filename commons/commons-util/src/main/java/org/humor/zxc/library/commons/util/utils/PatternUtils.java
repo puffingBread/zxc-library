@@ -12,25 +12,25 @@ import java.util.regex.Pattern;
  */
 public class PatternUtils {
     //邮箱地址
-    private static Pattern COMPILE_EMAIL = Pattern.compile("([A-Za-z0-9_\\-.\\u4e00-\\u9fa5])+@([A-Za-z0-9_\\-.])+\\.([A-Za-z]{2,8})");
+    private static final Pattern COMPILE_EMAIL = Pattern.compile("([A-Za-z0-9_\\-.\\u4e00-\\u9fa5])+@([A-Za-z0-9_\\-.])+\\.([A-Za-z]{2,8})");
     //日期
-    private static Pattern COMPILE_DATE = Pattern.compile("20\\d{2}-((0[1-9])|(1[0-2]))-((0[1-9])|([1-2][0-9])|(3[0-1]))");
+    private static final Pattern COMPILE_DATE = Pattern.compile("20\\d{2}-((0[1-9])|(1[0-2]))-((0[1-9])|([1-2][0-9])|(3[0-1]))");
     //IP
-    private static Pattern COMPILE_IP = Pattern.compile("((25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))\\.){3}(25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))");
+    private static final Pattern COMPILE_IP = Pattern.compile("((25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))\\.){3}(25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))");
     //中国大陆的手机号
-    private static Pattern COMPILE_MOBILE_CHINESE_MAINLAND = Pattern.compile("^[1][0-9]{10}$");
+    private static final Pattern COMPILE_MOBILE_CHINESE_MAINLAND = Pattern.compile("^[1][0-9]{10}$");
     //数字
-    private static Pattern COMPILE_DIGIT = Pattern.compile("[0-9]*$");
+    private static final Pattern COMPILE_DIGIT = Pattern.compile("[0-9]*$");
     //包含数字的字符串
-    private static Pattern COMPILE_DIGIT_CONTAINS = Pattern.compile(".*\\d+.*");
+    private static final Pattern COMPILE_DIGIT_CONTAINS = Pattern.compile(".*\\d+.*");
     //中文
-    private static Pattern COMPILE_CHINESE = Pattern.compile("[\u4e00-\u9fa5]");
+    private static final Pattern COMPILE_CHINESE = Pattern.compile("[\u4e00-\u9fa5]");
     //URI
-    private static Pattern COMPILE_URI = Pattern.compile("(/[A-Za-z0-9_]+(/[A-Za-z0-9_]+)+)");
+    private static final Pattern COMPILE_URI = Pattern.compile("(/[A-Za-z0-9_]+(/[A-Za-z0-9_]+)+)");
     //URL
-    private static Pattern COMPILE_URL = Pattern.compile("(http://|https://)[\\w.\\-/:?&%=,;\\[\\]{}`~!@#$^*()_+\\\\|]+");
+    private static final Pattern COMPILE_URL = Pattern.compile("(http://|https://)[\\w.\\-/:?&%=,;\\[\\]{}`~!@#$^*()_+\\\\|]+");
     //特殊字符串
-    private static Pattern COMPILE_STRING_SPECIAL = Pattern.compile(".*[^A-Za-z0-9]$");
+    private static final Pattern COMPILE_STRING_SPECIAL = Pattern.compile(".*[^A-Za-z0-9]$");
 
     // 正则表达式枚举类
     public enum PatternEnum {

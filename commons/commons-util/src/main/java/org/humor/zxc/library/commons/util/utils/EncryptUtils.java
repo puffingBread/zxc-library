@@ -25,8 +25,8 @@ public class EncryptUtils {
 		try {
 			MessageDigest alga = MessageDigest.getInstance(type);
 			alga.update(str.getBytes());
-			byte[] digesta = alga.digest();
-			return byte2hex(digesta);
+			byte[] digest = alga.digest();
+			return byte2hex(digest);
 		}
 		catch (Exception e) {
 			LOGGER.info(e.getMessage(), e);

@@ -20,14 +20,14 @@ public class FileUtils {
      * 判断指定url的文件是否存在
      *
      * @param url 网络上的文件的url
-     * @return
+     * @return boolean
      * @throws Exception
      */
     public static boolean isFileExist(String url) throws Exception {
         URL serverUrl = new URL(url);
-        HttpURLConnection urlcon = (HttpURLConnection) serverUrl.openConnection();
+        HttpURLConnection urlConnection = (HttpURLConnection) serverUrl.openConnection();
         //文件存在‘HTTP/1.1 200 OK’ 文件不存在 ‘HTTP/1.1 404 Not Found’
-        String message = urlcon.getHeaderField(0);
+        String message = urlConnection.getHeaderField(0);
         if (!StringUtils.isBlank(message) && message.startsWith("HTTP/1.1 404")) {
             System.out.println("serverUrl aacConvert this downUrl is not found! downUrl:" + url);
             return false;
@@ -79,7 +79,7 @@ public class FileUtils {
             // Charset.defaultCharset().name()));
             String str = null;
             if (isReader.ready()) {
-                list = new ArrayList<String>();
+                list = new ArrayList<>();
                 do {
                     str = isReader.readLine();
                     if (str == null) {
