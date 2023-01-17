@@ -11,6 +11,7 @@
 
     <modules>
         <module>commons</module>
+        <module>tools</module>
     </modules>
 
     <properties>
